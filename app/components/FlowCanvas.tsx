@@ -104,7 +104,7 @@ export default function FlowCanvas() {
     { id: "trigger-1", type: "trigger", position: { x: CX - 170, y: 0   }, data: { label: "Ticket", onAdd: handleAdd }, deletable: false },
     { id: "filter-1",  type: "filter",  position: { x: CX - 230, y: 190 }, data: { onDelete: deleteNode, onAdd: handleAdd } },
     { id: "channel-1", type: "channel", position: { x: CX - 170, y: 460 }, data: { onDelete: deleteNode, onAdd: handleAdd } },
-    { id: "action-1",  type: "action",  position: { x: CX - 220, y: 690 }, data: { onDelete: deleteNode, onAdd: handleAdd } },
+    { id: "action-1",  type: "action",  position: { x: CX - 240, y: 690 }, data: { onDelete: deleteNode, onAdd: handleAdd } },
   ];
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
