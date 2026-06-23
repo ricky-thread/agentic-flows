@@ -15,7 +15,7 @@ export default function FlowsPage() {
       <Sidebar />
       <main className="flex-1 overflow-auto" style={{ background: "var(--grid-bg)" }}>
         {/* Header */}
-        <div className="flex items-center justify-between px-8 py-5 bg-white border-b" style={{ borderColor: "var(--border)" }}>
+        <div className="flex items-center justify-between px-8 py-3 bg-white border-b" style={{ borderColor: "var(--border)" }}>
           <div>
             <h1 className="text-lg font-semibold text-gray-900">Flows</h1>
           </div>
