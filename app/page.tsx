@@ -18,7 +18,6 @@ export default function FlowsPage() {
         <div className="flex items-center justify-between px-8 py-5 bg-white border-b" style={{ borderColor: "var(--border)" }}>
           <div>
             <h1 className="text-lg font-semibold text-gray-900">Flows</h1>
-            <p className="text-sm text-gray-500 mt-0.5">Automate actions based on ticket conditions</p>
           </div>
           <Link
             href="/flows/configure-flow?name=New+flow"
