@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Handle, Position } from "@xyflow/react";
-import { Trash2, Info, Sparkles, ChevronDown, Bell } from "lucide-react";
+import { Trash2, Info, Sparkles, ChevronDown, Bell, Zap } from "lucide-react";
 import NodeAddButton, { type AddableNodeType } from "./NodeAddButton";
 
 const TABS = ["Reply", "Note", "Priority", "Assign", "Status", "Actions", "AI Agent"] as const;
@@ -191,7 +191,7 @@ function ActionsRowIcon({ type }: { type: "psa" | "itglue" | "magic" }) {
     </span>
   );
   return (
-    <span className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "#fdf8ec" }}>
+    <span className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "#e6f7f1" }}>
       <Sparkles size={14} style={{ color: "#00BB99" }} />
     </span>
   );
@@ -365,7 +365,7 @@ export default function ActionNode({ id, data }: {
                 borderBottomColor: tab === t ? (t === "AI Agent" ? "#8b5cf6" : "var(--primary)") : "transparent",
                 color: tab === t ? (t === "AI Agent" ? "#8b5cf6" : "var(--primary)") : "#6b7280",
               }}>
-              {t === "Actions" && <span>⚡</span>}
+              {t === "Actions" && <Zap size={11} />}
               {t === "AI Agent" && <Sparkles size={11} />}
               {t}
             </button>
