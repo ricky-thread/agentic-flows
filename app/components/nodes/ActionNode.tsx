@@ -374,10 +374,12 @@ export default function ActionNode({ id, data }: {
 
         {/* Reply */}
         {tab === "Reply" && (
-          <textarea value={reply} onChange={(e) => setReply(e.target.value)} rows={4}
-            onMouseDown={(e) => e.stopPropagation()}
-            placeholder="Set a custom message the bot will reply when this flow is triggered."
-            className="nodrag w-full text-sm text-gray-600 outline-none resize-none placeholder:text-gray-300 block" />
+          <div className="rounded-lg border p-3" style={{ borderColor: "var(--border)" }}>
+            <textarea value={reply} onChange={(e) => setReply(e.target.value)} rows={4}
+              onMouseDown={(e) => e.stopPropagation()}
+              placeholder="Set a custom message the bot will reply when this flow is triggered."
+              className="nodrag w-full text-sm text-gray-600 outline-none resize-none placeholder:text-gray-300 block" />
+          </div>
         )}
 
         {/* Note — cream background */}
