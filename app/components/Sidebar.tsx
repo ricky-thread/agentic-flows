@@ -72,7 +72,7 @@ export default function Sidebar() {
 
   return (
     <aside
-      className="flex flex-col w-[200px] min-w-[200px] h-full border-r overflow-y-auto"
+      className="flex flex-col w-[380px] min-w-[380px] h-full border-r overflow-y-auto"
       style={{ borderColor: "var(--sidebar-border)", background: "#FAF9F6" }}
     >
       {/* Logo */}
