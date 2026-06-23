@@ -6,6 +6,7 @@ import {
   Background,
   Controls,
   BackgroundVariant,
+  PanOnScrollMode,
   addEdge,
   useNodesState,
   useEdgesState,
@@ -32,8 +33,8 @@ export default function FlowCanvas() {
   // Use refs to always have current values inside callbacks
   const nodesRef = useRef<Node[]>([]);
   const edgesRef = useRef<Edge[]>([]);
-  const setNodesRef = useRef<ReturnType<typeof useNodesState>[1]>();
-  const setEdgesRef = useRef<ReturnType<typeof useEdgesState>[1]>();
+  const setNodesRef = useRef<ReturnType<typeof useNodesState>[1] | undefined>(undefined);
+  const setEdgesRef = useRef<ReturnType<typeof useEdgesState>[1] | undefined>(undefined);
 
   const deleteNode = useCallback((id: string) => {
     setNodesRef.current?.((nds) => nds.filter((n) => n.id !== id));
@@ -107,7 +108,7 @@ export default function FlowCanvas() {
   ];
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([
+  const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([
     { id: "e1-2", source: "trigger-1", target: "filter-1",  type: "smoothstep" },
     { id: "e2-3", source: "filter-1",  target: "channel-1", type: "smoothstep" },
     { id: "e3-4", source: "channel-1", target: "action-1",  type: "smoothstep" },
@@ -138,7 +139,7 @@ export default function FlowCanvas() {
         maxZoom={2}
         panOnScroll
         panOnScrollSpeed={1.5}
-        panOnScrollMode="free"
+        panOnScrollMode={PanOnScrollMode.Free}
         zoomOnPinch
         zoomOnScroll={false}
       >

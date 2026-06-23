@@ -360,8 +360,8 @@ export default function ActionNode({ id, data }: {
           {TABS.map((t) => (
             <button key={t} onClick={() => setTab(t)}
               className="flex items-center gap-1 px-2 py-1.5 text-xs font-medium border-b-2 transition-colors -mb-px whitespace-nowrap flex-shrink-0"
-              style={{ paddingRight: t === "AI Agent" ? 20 : undefined }}
               style={{
+                paddingRight: t === "AI Agent" ? 20 : undefined,
                 borderBottomColor: tab === t ? (t === "AI Agent" ? "#8b5cf6" : "var(--primary)") : "transparent",
                 color: tab === t ? (t === "AI Agent" ? "#8b5cf6" : "var(--primary)") : "#6b7280",
               }}>
