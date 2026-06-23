@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #00BB99;
+  --primary-dark: #009980;
+  --primary-light: #e6f7f1;
+  --grid-bg: #FAF9F6;
+  --border: #e5e5e3;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #ebebeb;
+  --muted: #6b7280;
+  --danger: #ef4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #00BB99 !important;
+  box-shadow: 0 0 0 3px rgba(0, 187, 153, 0.2) !important;
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.react-flow__pane {
+  cursor: default !important;
+}
+
+.react-flow__pane.dragging {
+  cursor: grab !important;
+}
+
+.react-flow__background {
+  background-color: var(--grid-bg);
+}
+
+.react-flow__edge-path {
+  stroke: #9ca3af;
+  stroke-width: 2;
+}
+
+.react-flow__controls {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: white;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: none;
+}
