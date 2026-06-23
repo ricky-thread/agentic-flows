@@ -64,7 +64,7 @@ const navGroups = [
 
 const teams = [
   { label: "Alex's Team", color: "#f97316" },
-  { label: "Dispatch team members", color: "#8b5cf6" },
+  { label: "Dispatch team", color: "#8b5cf6" },
 ];
 
 export default function Sidebar() {
